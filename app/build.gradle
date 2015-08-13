@@ -47,6 +47,7 @@ android {
         versionCode 1
         versionName "1.0"
     }
+
     buildTypes {
         debug {
             debuggable true
@@ -59,6 +60,10 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
             testCoverageEnabled false
         }
+    }
+
+    lintOptions {
+        abortOnError false
     }
 
     sourceSets { main { java.srcDirs = ['src/main/java', 'src/test/java'] } }
