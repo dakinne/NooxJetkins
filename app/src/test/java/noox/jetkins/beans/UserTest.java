@@ -10,14 +10,33 @@ import org.junit.Test;
 public class UserTest {
 
     @Test
-    public void testUserName() {
+    public void testFirstname() {
 
-        String fakeName = "fakeName";
+        String fakeFirstname = "fakeFirstname";
 
         User user = new User();
-        user.setName(fakeName);
+        user.setFirstname(fakeFirstname);
 
-        Assert.assertEquals(fakeName, user.getName());
+        Assert.assertEquals(fakeFirstname, user.getFirstname());
     }
 
+    @Test
+    public void testLastname() {
+
+        String fakeLastname = "fakeLastname";
+
+        User user = new User();
+        user.setLastname(fakeLastname);
+
+        Assert.assertEquals(fakeLastname, user.getLastname());
+    }
+
+    @Test
+    public void testNullsByDefault() {
+
+        User user = new User();
+
+        Assert.assertEquals(null, user.getFirstname());
+        Assert.assertEquals(null, user.getLastname());
+    }
 }
