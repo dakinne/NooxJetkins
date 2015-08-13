@@ -20,9 +20,4 @@ public class UserTest {
         Assert.assertEquals(fakeName, user.getName());
     }
 
-    @Test
-    public void failingTest() {
-        Assert.assertFalse(true);
-    }
-
 }
